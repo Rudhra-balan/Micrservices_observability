@@ -1,0 +1,55 @@
+{
+  "Serilog": {
+    "LevelSwitches": {
+      "$databaseSwitch": "Error",
+      "$fileSwitch": "Debug"
+    },
+    "MinimumLevel": {
+      "Default": "Verbose",
+      "Override": {
+        "Microsoft": "Warning",
+        "Microsoft.Hosting.Lifetime": "Warning",
+        "Microsoft.AspNetCore": "Warning",
+        "System": "Warning"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "Logger",
+        "Args": {
+          "configureLogger": {
+            "Filter": [
+              {
+                "Name": "ByIncludingOnly",
+                "Args": {
+                  "expression": "(@Level = 'Error' or @Level = 'Fatal' or @Level = 'Warning' or @Level = 'Information' or @Level = 'Debug')"
+                }
+              }
+            ],
+            "WriteTo": [
+              {
+                "Name": "File",
+                "Args": {
+                  "path": "%TEMP%/Logs/clientApp-.log",
+                  "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] [{SourceContext}] | {ClassNameDelimited}{Message:l}{NewLine}{Exception}",
+                  "rollingInterval": "Day",
+                  "retainedFileCountLimit": 7
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "Enrich": [
+      "FromLogContext",
+      "WithMachineName"
+    ],
+    "Properties": {
+      "Application": "Client Application"
+    }
+  },
+  "ApiSettings": {
+    "GatewayAddress": "http://13.127.253.175:6005"
+  }
+}

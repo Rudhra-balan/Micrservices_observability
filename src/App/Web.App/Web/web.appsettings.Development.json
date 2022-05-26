@@ -1,0 +1,15 @@
+{
+  "metrics": {
+    "Enabled": true,
+    "InfluxEnabled": false,
+    "PrometheusEnabled": true,
+    "PrometheusFormatter": "",
+    "Database": "",
+    "Interval": 10,
+    "Tags": {
+      "app": "Web.app",
+      "env": "Development",
+      "server": "linux"
+    }
+  }
+}

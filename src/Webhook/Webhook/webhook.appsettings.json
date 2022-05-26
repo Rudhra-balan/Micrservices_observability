@@ -1,0 +1,30 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ServiceProfiler": {
+    "IsDisabled": false,
+    "Duration": "00:00:30",
+    "InitialDelay": "00:00:03",
+    "ProvideAnonymousTelemetry": true,
+    "IsSkipCompatibilityTest": false
+  },
+
+  "APPINSIGHTS_INSTRUMENTATIONKEY": "427f816f-daff-406d-9694-6bb09976cdcc",
+  "ApplicationInsights": {
+    "AddAutoCollectedMetricExtractor": true,
+    "ConnectionString": "InstrumentationKey=427f816f-daff-406d-9694-6bb09976cdcc;IngestionEndpoint=https://centralindia-0.in.applicationinsights.azure.com/;LiveEndpoint=https://centralindia.livediagnostics.monitor.azure.com/",
+    "EnableAdaptiveSampling": true,
+    "EnableDependencyTrackingTelemetryModule": true,
+    "EnableDiagnosticsTelemetryModule": true,
+    "EnableEventCounterCollectionModule": true,
+    "EnableHeartbeat": true,
+    "EnablePerformanceCounterCollectionModule": true,
+    "EnableRequestTrackingTelemetryModule": true,
+    "RequestCollectionOptions.TrackExceptions": true
+  }
+}

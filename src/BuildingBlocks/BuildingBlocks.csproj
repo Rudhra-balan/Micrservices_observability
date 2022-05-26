@@ -1,0 +1,102 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+        <ExcludeGeneratedDebugSymbol>False</ExcludeGeneratedDebugSymbol>
+		<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <AssemblyName>BuildingBlocks</AssemblyName>
+        <Configurations>Debug;Release;BuildingBlocks</Configurations>
+        <Platforms>AnyCPU</Platforms>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <IsPackable>true</IsPackable>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <Optimize>true</Optimize>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Abp" Version="7.1.0" />
+        <PackageReference Include="Abp.EntityFrameworkCore" Version="7.1.0" />
+        <PackageReference Include="AspNetCore.HealthChecks.Prometheus.Metrics" Version="6.0.2" />
+        <PackageReference Include="AspNetCore.HealthChecks.Publisher.ApplicationInsights" Version="6.0.2" />
+        <PackageReference Include="AspNetCore.HealthChecks.Publisher.Prometheus" Version="6.0.2" />
+        <PackageReference Include="AspNetCore.HealthChecks.Uris" Version="6.0.3" />
+        <PackageReference Include="AspNetCoreRateLimit" Version="4.0.2" />
+        <PackageReference Include="Ben.BlockingDetector" Version="0.0.4" />
+        <PackageReference Include="DotNetCore.CAP.Sqlite" Version="6.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="DotNetCore.CAP" Version="6.0.1" />
+        <PackageReference Include="DotNetCore.CAP.Dashboard" Version="6.0.1" />
+        <PackageReference Include="DotNetCore.CAP.OpenTelemetry" Version="6.0.1" />
+        <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="6.0.1" />
+        <PackageReference Include="Figgle" Version="0.4.0" />
+        <PackageReference Include="FluentValidation.AspNetCore" Version="10.4.0" />
+        <PackageReference Include="Lockbox.Client" Version="2.0.2" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.3">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="6.0.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Design" Version="1.1.6" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
+        <PackageReference Include="NewRelic.LogEnrichers.Serilog" Version="1.0.1" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+        <PackageReference Include="OpenTelemetry" Version="1.2.0-rc2" />
+        <PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.2.0-rc2" />
+        <PackageReference Include="OpenTelemetry.Exporter.Zipkin" Version="1.2.0-rc2" />
+        <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.0.0-rc9" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.0.0-rc9" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.0.0-rc9" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.SqlClient" Version="1.0.0-rc9" />
+        <PackageReference Include="Polly" Version="7.2.3" />
+        <PackageReference Include="prometheus-net.AspNetCore" Version="6.0.0" />
+        <PackageReference Include="prometheus-net.DotNetRuntime" Version="4.2.3" />
+        <PackageReference Include="prometheus-net.SystemMetrics" Version="2.0.0" />
+        <PackageReference Include="Prometheus.Client" Version="4.5.3" />
+        <PackageReference Include="Serilog" Version="2.10.0" />
+        <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
+        <PackageReference Include="Serilog.Enrichers.Environment" Version="2.2.0" />
+        <PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
+        <PackageReference Include="Serilog.Exceptions" Version="8.1.0" />
+        <PackageReference Include="Serilog.Expressions" Version="3.3.0" />
+        <PackageReference Include="Serilog.Extensions.Logging" Version="3.1.0" />
+        <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
+        <PackageReference Include="Serilog.Formatting.Elasticsearch" Version="8.4.1" />
+        <PackageReference Include="Serilog.Sinks.ApplicationInsights" Version="3.1.0" />
+        <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+        <PackageReference Include="Serilog.Sinks.Console" Version="4.0.1" />
+        <PackageReference Include="Serilog.Sinks.ElasticSearch" Version="8.4.1" />
+        <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+        <PackageReference Include="Serilog.Sinks.Seq" Version="5.1.1" />
+        <PackageReference Include="Serilog.Sinks.SQLite" Version="5.0.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore.ReDoc" Version="6.3.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.3.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.3.0" />
+        <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="6.0.3" />
+        <PackageReference Include="Scrutor" Version="4.1.0" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.1" />
+        <PackageReference Include="EventStore.Client" Version="21.2.2" />
+        <PackageReference Include="RabbitMQ.Client" Version="6.2.4" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+        <PackageReference Include="Duende.IdentityServer" Version="6.0.4" />
+        <PackageReference Include="Duende.IdentityServer.AspNetIdentity" Version="6.0.4" />
+        <PackageReference Include="Duende.IdentityServer.EntityFramework" Version="6.0.4" />
+        <PackageReference Include="Duende.IdentityServer.EntityFramework.Storage" Version="6.0.4" />
+    </ItemGroup>
+
+</Project>

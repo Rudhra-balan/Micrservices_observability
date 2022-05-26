@@ -1,0 +1,103 @@
+﻿@using DomainCore.Models.Balance
+@using Application.Common
+@model DomainCore.Models.Balance.BalanceModel
+
+
+@{
+    var balanceModel = Model;
+
+    if (balanceModel == null)
+    {
+        throw new ArgumentNullException(nameof(balanceModel));
+    }
+
+        <div id="content" class="main-content">
+            <div class="layout-px-spacing">
+
+                <div class="row layout-spacing">
+
+                    <!-- Content -->
+                    <div class="col-xl-4 col-lg-6 col-md-5 col-sm-12 layout-top-spacing">
+
+                        <div class="user-profile layout-spacing">
+                            <div class="widget-content widget-content-area">
+                             
+                            <h3 class="">Summary</h3>
+
+                                <div class="text-center user-info">
+                                    <p class=""> @(User.GetFirstName())  @(User.GetLastName())</p>
+                                </div>
+                                <div class="user-info-list">
+
+                                    <div class="">
+                                   
+                                        <ul class="contacts-block list-unstyled">
+                                            <li class="contacts-block__item">
+                                                Account Number : @balanceModel.AccountNumber
+                                            </li>
+                                          
+                                            <li class="contacts-block__item">
+                                                 Balance : @balanceModel.Balance.Amount
+                                            </li>
+                                            <li class="contacts-block__item">
+                                                 Currency : @balanceModel.Balance.Currency
+                                            </li>
+                                        </ul>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                  </div>
+                   <div class="col-xl-8 col-lg-6 col-md-7 col-sm-12 layout-top-spacing">
+                   <div class="work-experience layout-spacing ">
+                            
+                            <div class="widget-content widget-content-area">
+
+                                <h3 class="">Last 5 Transaction</h3>
+                                
+                                <div class="timeline-alter">
+                                @{
+                                    if(!Model.TransactionHistory.Any())
+                                    {
+                                         <div class="item-timeline">
+                                        <div class="t-meta-date">
+                                            <p class="">@DateTime.Now.ToShortDateString()</p>
+                                        </div>
+                                        <div class="t-dot">
+                                        </div>
+                                        <div class="t-text">
+                                            <p>No Transaction</p>
+                                            <p>History Found</p>
+                                        </div>
+                                    </div>
+                                    }
+                                    foreach(var transaction in Model.TransactionHistory)
+                                    {
+                                        <div class="item-timeline">
+                                        <div class="t-meta-date">
+                                            <p class="">@transaction.ModifiedDate.ToShortDateString()</p>
+                                        </div>
+                                        <div class="t-dot">
+                                        </div>
+                                        <div class="t-text">
+                                            <p>Transaction :@transaction.TransactionType.</p>
+                                            <p>Amount : @transaction.Amount </p>
+                                        </div>
+                                    </div>
+
+                                    }
+                                }
+                                    
+                                   
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                   </div>
+             </div>
+          </div>
+       </div>
+ 
+}

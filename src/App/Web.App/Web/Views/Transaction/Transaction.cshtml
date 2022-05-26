@@ -1,0 +1,57 @@
+﻿@using DomainCore.Helper.Constant
+@using Web.Common.Helper.Bundle
+@using Web.Common.Helper.StaticFileService
+@using Microsoft.AspNetCore.Hosting
+
+@{
+  
+
+    <div id="content" class="main-content">
+            <div class="layout-px-spacing">                
+                    
+                <div class="account-settings-container layout-top-spacing">
+
+                    <div class="account-content">
+                       
+                            <div class="row">
+                              <div class="col-xl-12 col-lg-12 col-md-12 layout-spacing">
+                                    
+                                        <div class="info">
+                                            <h5 class="">Transaction</h5>
+                                            <div class="row">
+                                                <div class="col-md-11 mx-auto">
+                                                    <div class="row">
+                                                     <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="amount">Amount</label>
+                                                                <input type="number" class="form-control mb-4" id="amount" onkeypress="return isNumberKey(event)" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="country">Transaction Type</label>
+                                                                <select class="form-control" id="transactionType">
+                                                                    <option>-Select Transaction Type-</option>
+                                                                    <option value="1">Deposit</option>
+                                                                    <option value="2">Withdraw</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                           <div class="col-md-12 text-right mb-5">
+                                                                <button id="add-work-platforms" class="btn btn-primary" onclick="onClickTransaction()" >Submit</button>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                  
+                                </div>
+
+
+                            </div>
+                         
+                     </div>
+                </div>
+             </div>
+       </div>
+}

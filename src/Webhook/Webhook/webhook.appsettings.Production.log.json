@@ -1,0 +1,26 @@
+{
+  "logger": {
+    "Level": "Verbose",
+    "Console": {
+      "Enabled": "true"
+    },
+    "File": {
+      "Enabled": "true",
+      "Path": "/usr/bin/transaction-microservice/logs/webhook-.json",
+      "Interval": "Day"
+    },
+    "MinimumLevelOverrides": {
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Warning",
+      "Microsoft.AspNetCore": "Warning",
+      "System": "Warning"
+    },
+    "ExcludeProperties": [
+       ]
+  },
+  "app": {
+    "Service": "webhook.Api",
+    "Instance": "1",
+    "Version": "1.0.0"
+  }
+}

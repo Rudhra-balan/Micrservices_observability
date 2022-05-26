@@ -1,0 +1,22 @@
+{
+  "swagger": {
+    "Version": "V1",
+    "Title": "webhook",
+    "Description": "For intergrate with grafana",
+    "Name": "webhook api",
+    "Enabled": "true"
+  },
+  "metrics": {
+    "Enabled": true,
+    "InfluxEnabled": false,
+    "PrometheusEnabled": true,
+    "PrometheusFormatter": "",
+    "Database": "",
+    "Interval": 10,
+    "Tags": {
+      "app": "Webhook",
+      "env": "Development",
+      "server": "linux"
+    }
+  }
+}

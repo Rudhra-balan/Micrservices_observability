@@ -1,0 +1,27 @@
+{
+  "logger": {
+    "Level": "Verbose",
+    "Console": {
+      "Enabled": "true"
+    },
+    "File": {
+      "Enabled": "true",
+      "Path": "/Logs/ClientApp-.json",
+      "Interval": "Day"
+    },
+    "MinimumLevelOverrides": {
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Warning",
+      "Microsoft.AspNetCore": "Warning",
+      "System": "Warning"
+    },
+    "ExcludeProperties": [
+    
+    ]
+  },
+  "app": {
+    "Service": "Client.App",
+    "Instance": "1",
+    "Version": "1.0.0"
+  }
+}
